@@ -1,4 +1,4 @@
-import Root from '@components/Root';
+import Root from 'components/Root';
 import React from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { Provider } from 'react-redux';

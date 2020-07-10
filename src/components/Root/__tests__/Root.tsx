@@ -1,4 +1,4 @@
-import App from '@components/Root';
+import App from 'components/Root';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
