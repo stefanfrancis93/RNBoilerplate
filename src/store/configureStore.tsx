@@ -1,4 +1,3 @@
-// import { composeWithDevTools } from 'redux-devtools-extension';
 import {
   applyMiddleware,
   compose,
@@ -15,7 +14,6 @@ export type Store = ReduxStore<typeof initialState>;
 
 export default (state = initialState): Store => {
   const middlewares = dev ? [createLogger()] : [];
-  // return createStore(reducers, state, compose(applyMiddleware(...middlewares)));
   return createStore<typeof initialState, any, unknown, unknown>(
     reducers,
     state,
