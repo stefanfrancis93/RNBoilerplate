@@ -5,6 +5,8 @@
 - **[TypeScript](https://www.typescriptlang.org/)** to ensure the highest code quality
 - **[React](https://reactjs.org/)** to describe interface components
 - **[ESLint](https://eslint.org/)** and **[Prettier](https://prettier.io/)** to ensure that source files are error-free and easy to read
+- **[React Native Paper](https://callstack.github.io/react-native-paper/)** - for theming support
+- **[React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)**
 
 ## Project structure
 
