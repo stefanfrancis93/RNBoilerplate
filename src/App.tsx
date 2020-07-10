@@ -1,4 +1,4 @@
-import Root from 'components/Root';
+import Navigator from 'navigation';
 import React from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { Provider } from 'react-redux';
@@ -11,7 +11,7 @@ const App: () => JSX.Element = () => {
   return (
     <Provider store={store}>
       <PaperProvider>
-        <Root />
+        <Navigator />
       </PaperProvider>
     </Provider>
   );

@@ -5,7 +5,7 @@ import { logout } from 'store/auth/actions';
 
 import styles from './styles';
 
-const App: () => JSX.Element = () => {
+const Login: () => JSX.Element = () => {
   return (
     <View style={styles.container}>
       <Button
@@ -19,4 +19,4 @@ const App: () => JSX.Element = () => {
   );
 };
 
-export default App;
+export default Login;
