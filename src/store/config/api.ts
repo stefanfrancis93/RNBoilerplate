@@ -1,13 +1,18 @@
 import store from "@Store/configureStore";
-import { API_METHODS } from "@Utils/constants";
+
+export const API_METHODS: {
+  [key: string]: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+} = {
+  GET: "GET",
+  POST: "POST",
+  PUT: "PUT",
+  PATCH: "DELETE",
+  DELETE: "DELETE",
+};
 
 type Payload = {
-  method:
-    | typeof API_METHODS.GET
-    | typeof API_METHODS.POST
-    | typeof API_METHODS.PUT
-    | typeof API_METHODS.PATCH
-    | typeof API_METHODS.DELETE;
+  baseUrl?: string;
+  method?: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
   url: string;
   data?: any;
   headers?: { "content-type": string; Authorization: string };
@@ -21,13 +26,21 @@ type Payload = {
   };
 };
 
-// Replace your base Api's base URL here.
+// TODO
+// Move BASE_URL to config files
 const BASE_URL = "https://jsonplaceholder.typicode.com/";
 
-const apiCall: any = async (payload: Payload) => {
-  const { method, url, data, headers, params, TYPES } = payload;
+const fetchAsync = async ({
+  baseUrl = BASE_URL,
+  method,
+  url,
+  data,
+  headers,
+  params,
+  TYPES,
+}: Payload) => {
   // creating api URL with appending parameters
-  const API_URL = new URL(BASE_URL + url);
+  const API_URL = new URL(`${baseUrl}${url}`);
   API_URL.search = String(new URLSearchParams(params));
   const { dispatch } = store();
 
@@ -48,7 +61,6 @@ const apiCall: any = async (payload: Payload) => {
     if (TYPES.successType) {
       dispatch({ type: TYPES.successType, payload: responseJson });
     }
-
     return responseJson;
   } catch (error) {
     // Dispatching failure action
@@ -57,4 +69,4 @@ const apiCall: any = async (payload: Payload) => {
   }
 };
 
-export default apiCall;
+export default fetchAsync;

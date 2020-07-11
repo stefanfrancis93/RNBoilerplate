@@ -7,7 +7,7 @@ import { navigationRef } from "./NavigationService";
 
 const Stack = createStackNavigator();
 
-const App: () => JSX.Element = () => {
+const App = () => {
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator>

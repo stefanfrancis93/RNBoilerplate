@@ -5,7 +5,7 @@ import { Button } from "react-native-paper";
 
 import styles from "./styles";
 
-const App: () => JSX.Element = () => {
+const App = () => {
   return (
     <View style={styles.container}>
       <Button
