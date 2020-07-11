@@ -5,16 +5,16 @@ import {
   USER_LOGIN_INIT,
   USER_LOGIN_SUCCESS,
   USER_LOGOUT,
-} from './type';
+} from "./type";
 
 export const initialState: Auth = {
   loginSuccess: false,
   role: null,
-  userId: '',
-  phoneNumber: '',
-  email: '',
-  name: '',
-  avatar: '',
+  userId: "",
+  phoneNumber: "",
+  email: "",
+  name: "",
+  avatar: "",
 };
 
 export default (state = initialState, action: AuthActionTypes): any => {
