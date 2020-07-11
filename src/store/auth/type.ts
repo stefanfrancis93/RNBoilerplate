@@ -1,8 +1,8 @@
 // Actions
-export const USER_LOGIN_INIT = 'USER:LOGIN:INIT';
-export const USER_LOGIN_SUCCESS = 'USER:LOGIN:SUCCESS';
-export const USER_LOGIN_FAIL = 'USER:LOGIN:FAIL';
-export const USER_LOGOUT = 'USER:LOGOUT';
+export const USER_LOGIN_INIT = "USER:LOGIN:INIT";
+export const USER_LOGIN_SUCCESS = "USER:LOGIN:SUCCESS";
+export const USER_LOGIN_FAIL = "USER:LOGIN:FAIL";
+export const USER_LOGOUT = "USER:LOGOUT";
 
 // State
 export interface Auth {

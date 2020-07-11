@@ -3,12 +3,12 @@ import {
   compose,
   createStore,
   Store as ReduxStore,
-} from 'redux';
-import { createLogger } from 'redux-logger';
+} from "redux";
+import { createLogger } from "redux-logger";
 
-import reducers, { initialState } from './rootReducer';
+import reducers, { initialState } from "./rootReducer";
 
-const dev: boolean = process.env.NODE_ENV !== 'production';
+const dev: boolean = process.env.NODE_ENV !== "production";
 
 export type Store = ReduxStore<typeof initialState>;
 

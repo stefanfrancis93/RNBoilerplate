@@ -1,9 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import * as React from 'react';
-import Login from 'screens/Login';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Login from "@Screens/Login";
+import * as React from "react";
 
-import { navigationRef } from './NavigationService';
+import { navigationRef } from "./NavigationService";
 
 const Stack = createStackNavigator();
 

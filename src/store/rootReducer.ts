@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import authReducer, { initialState as authState } from 'store/auth/reducer';
+import authReducer, { initialState as authState } from "@Store/auth/reducer";
+import { combineReducers } from "redux";
 
 export const initialState = {
   auth: authState,

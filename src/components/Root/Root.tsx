@@ -1,9 +1,9 @@
-import React from 'react';
-import { View } from 'react-native';
-import { Button } from 'react-native-paper';
-import { logout } from 'store/auth/actions';
+import { logout } from "@Store/auth/actions";
+import React from "react";
+import { View } from "react-native";
+import { Button } from "react-native-paper";
 
-import styles from './styles';
+import styles from "./styles";
 
 const App: () => JSX.Element = () => {
   return (

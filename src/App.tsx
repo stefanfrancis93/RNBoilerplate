@@ -1,9 +1,8 @@
-import Navigator from 'navigation';
-import React from 'react';
-import { Provider as PaperProvider } from 'react-native-paper';
-import { Provider } from 'react-redux';
-
-import configureStore from './store/configureStore';
+import Navigator from "@Navigation/NavigationStack";
+import configureStore from "@Store/configureStore";
+import React from "react";
+import { Provider as PaperProvider } from "react-native-paper";
+import { Provider } from "react-redux";
 
 const App: () => JSX.Element = () => {
   const store = configureStore();
