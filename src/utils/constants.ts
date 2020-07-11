@@ -1,9 +1,6 @@
-const API_METHODS = {
-  GET: "GET",
-  POST: "POST",
-  PUT: "PUT",
-  PATCH: "DELETE",
-  DELETE: "DELETE",
+// Constant objects to be stored here
+const ConstObj = {
+  key: "value",
 };
 
-export { API_METHODS };
+export { ConstObj };

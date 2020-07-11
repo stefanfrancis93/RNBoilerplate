@@ -5,7 +5,7 @@ import { Button } from "react-native-paper";
 
 import styles from "./styles";
 
-const Login: () => JSX.Element = () => {
+const Login = () => {
   const handleLogin = () => {
     login({
       username: "johndoe",

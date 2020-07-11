@@ -63,6 +63,7 @@ module.exports = {
     "simple-import-sort/sort": "error",
     "sort-imports": "off",
     "spaced-comment": ["error", "always", { block: { balanced: true } }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
   },
   settings: {
     "import/resolver": {

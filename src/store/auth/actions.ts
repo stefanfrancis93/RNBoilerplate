@@ -4,20 +4,16 @@ import {
   USER_LOGIN_SUCCESS,
   USER_LOGOUT,
 } from "@Store/auth/type";
-import apiCall from "@Store/config/api";
+import fetchAsync, { API_METHODS } from "@Store/config/api";
 import { API_END_POINTS } from "@Store/config/constants";
 import store from "@Store/configureStore";
-import { API_METHODS } from "utils/constants";
 
-export const logout: () => void = () => {
+export const logout = async () => {
   const { dispatch } = store();
   dispatch({ type: USER_LOGOUT });
 };
 
-export const login: (data: {
-  username: string;
-  password: string;
-}) => void = async (data: { username: string; password: string }) => {
+export const login = async (data: { username: string; password: string }) => {
   const { LOGIN } = API_END_POINTS;
   const options = {
     url: LOGIN,
@@ -30,6 +26,6 @@ export const login: (data: {
     },
   };
 
-  const response = await apiCall(options);
+  const response = await fetchAsync(options);
   return response;
 };
